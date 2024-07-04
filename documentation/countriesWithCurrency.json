@@ -1,0 +1,14 @@
+{
+  "name": "getCurrency",
+  "description": "Retrieve currency of a country based on its country code",
+  "input": {
+    "type": "string",
+    "description": "The ISO 3166-1 alpha-2 country code (e.g., 'US' for United States)",
+    "example": "US"
+  },
+  "output": {
+    "type": "string",
+    "description": "Currency of the specified country",
+    "example": "USD"
+  }
+}
