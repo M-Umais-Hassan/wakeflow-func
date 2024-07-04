@@ -1,12 +1,14 @@
-import express from "express";
-import fs from "fs";
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const countriesData = JSON.parse(fs.readFileSync("data.json", "utf8"));
+const filePath = path.join(__dirname, "data.json");
+const countriesData = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
 const getDocs = (req, res) => {
   const fileContent = JSON.parse(
